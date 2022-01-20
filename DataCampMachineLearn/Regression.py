@@ -1,5 +1,7 @@
 # %%
 # Import numpy and pandas
+from sklearn.linear_model import Lasso
+from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
@@ -74,3 +76,31 @@ y_pred = reg_all.predict(X_test)
 print("R^2: {}".format(reg_all.score(X_test, y_test)))
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 print("Root Mean Squared Error: {}".format(rmse))
+
+# %%%
+# Cross validation
+
+reg = LinearRegression()
+
+cv_results = cross_val_score(reg, X, y, cv=5)
+
+
+# %%
+
+# Import Lasso
+
+# Instantiate a lasso regressor: lasso
+lasso = Lasso(alpha=0.4, normalize=True)
+
+# Fit the regressor to the data
+lasso.fit(X, y)
+
+# Compute and print the coefficients
+lasso_coef = lasso.fit(X, y).coef_
+print(lasso_coef)
+
+# Plot the coefficients
+plt.plot(range(len(df_columns)), lasso_coef)
+plt.xticks(range(len(df_columns)), df_columns.values, rotation=60)
+plt.margins(0.02)
+plt.show()
