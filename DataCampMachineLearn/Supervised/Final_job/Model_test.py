@@ -1,7 +1,17 @@
 # %%
-import plotly.express as px
-import pandas as pd
+
 import numpy as np
+import pandas as pd
+import plotly.express as px
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler, scale
+#from sklearn.preprocessing import Imputer
+from sklearn.pipeline import Pipeline
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 
 # %%
@@ -51,15 +61,14 @@ df
 df.isnull().sum()
 # %%
 df.to_csv('data_clear.csv')
+#----------------------------------------------------------------#
 # %%
 df['country']
 
 # %%
 fig = px.histogram(df, x='country', y='2015')
 fig.show()
-# %%
-fig = px.histogram(df, x='Brazil')
-fig.show()
+
 # %%
 df.iloc[25]
 
@@ -76,5 +85,47 @@ fig_br = px.histogram(df_brazil)
 fig_br.show()
 
 # %%
-df_brazil = df.set_index()
+df_brazil
+
+# %%
+df_brazil.columns
+# %%
+df_brazil.T
+# %%
+# %%
+df_brazil
+# %%
+df_brazil.reset_index(drop=True)
+# %%
+
+df['country'][1]
+# %%
+
+# %%
+steps = [('scaler', StandardScaler()),
+         ('LogisticRegression', LogisticRegression())]
+# %%
+pipeline = Pipeline(steps)
+# %%
+df['country'].values
+# %%
+X = df.drop(['country', '2015'], axis=1).values
+y = df['2015'].values
+# %%
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.4, random_state=42)
+# %%
+X.shape
+# %%
+y.shape
+
+# %%
+logreg_pipe = pipeline.fit(X_train, y_train)
+logreg = LogisticRegression().fit(X_train, y_train)
+# %%
+df_origin = pd.get_dummies(df)
+# %%
+df_origin
+# %%
+y
 # %%
