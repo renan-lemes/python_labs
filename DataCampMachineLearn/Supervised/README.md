@@ -1,4 +1,5 @@
-# Supervised Learning 
+# Supervised Learning 🤖
+
 * Regressão 
 * Classificação
 * Underfitting e overfitting
@@ -6,6 +7,6 @@
 * Cross-validation
 * Grid search
 
-## Modelos 
+## Modelos
 * Lasso, Ridge, Regressão e Regularização
 * Processamento de dados
