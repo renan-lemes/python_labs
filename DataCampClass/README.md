@@ -1,4 +1,4 @@
-## Python Programação Orientada a Objeto 🐍 
+## Programação Orientada a Objeto em Python 🐍 
 ### Assuntos vistos 📖
 * Classes e Objetos 
 * Atributos e métodos
