@@ -6,6 +6,10 @@
 * Recuperação da imagem:
     * Buscar a imagem de interesse
 * Medir padrão :
-    Medir os objetos
+    * Medir os objetos
 * Reconhecimento:
     * Distinguir objetos em uma imagem
+## Numpy com imagens
+    * Inverter imagens
+    * Extrair recursos como features
+    * Separar multidimensional em canais separadamente
