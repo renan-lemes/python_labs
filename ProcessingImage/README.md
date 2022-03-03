@@ -12,4 +12,4 @@
 ## Numpy com imagens
     * Inverter imagens
     * Extrair recursos como features
-    * Separar multidimensional em canais separadamente
+    * Separar multidimensional em canais separadamente 
