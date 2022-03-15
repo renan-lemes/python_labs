@@ -13,3 +13,7 @@
     * Inverter imagens
     * Extrair recursos como features
     * Separar multidimensional em canais separadamente 
+## Histograma 
+    * Padrão
+    * Adaptativo e equalizado
+    * Contraste Limitado (CLAHE)
