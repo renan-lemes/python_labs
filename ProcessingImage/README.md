@@ -17,3 +17,6 @@
     * Padrão
     * Adaptativo e equalizado
     * Contraste Limitado (CLAHE)
+## Operações Morfologicas
+    * Dilatação
+    * Erosão
