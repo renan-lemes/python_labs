@@ -20,3 +20,7 @@
 ## Operações Morfologicas
     * Dilatação
     * Erosão
+## Restauração de imagens
+    * Corrigir imagens danificadas 
+    * Reconstrução de imagens 
+    * Remoção de texto
