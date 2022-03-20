@@ -24,3 +24,15 @@
     * Corrigir imagens danificadas 
     * Reconstrução de imagens 
     * Remoção de texto
+## Algoritmos de eliminação de ruido
+    * Variação total (TV)
+    * Bilateral
+    * Wavelet
+    * Média Não-local 
+## Segmentação
+    * Supervisionado
+    * Não Supervisionado
+        * (SLIC) Simple Linear Interative Clustering
+## Contornos
+    * Medir o tamanho
+    * Classificar as formas ou determinar o número de objetos em uma imagem
