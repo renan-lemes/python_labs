@@ -36,3 +36,8 @@
 ## Contornos
     * Medir o tamanho
     * Classificar as formas ou determinar o número de objetos em uma imagem
+    * Bordas
+        * Canny
+        * Sobel
+    * Cantos
+        * Harris Coner Detector
