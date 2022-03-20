@@ -41,3 +41,8 @@
         * Sobel
     * Cantos
         * Harris Coner Detector
+    *Indentificação facial
+## Aplicação
+    * Converter imagens em cinzas antes de detectar bordas ou cantos
+    * Detectar faces para desfoca-las aplicando filtro gaussiano
+    * Restaurando uma imagem danificada
